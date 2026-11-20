@@ -19,17 +19,18 @@ import ProfileForm from "./components/ProfileForm";
 
 function App() {
   const { getPatientInfo, fetchAllDoctorsDetails } = useContext(apiContext)
-  const { doctorsData } = useContext(AppContext)
 
   useEffect(() => {
     (async () => {
       try {
         await getPatientInfo();
-        if (doctorsData.length === 0) {
-          await fetchAllDoctorsDetails();
-        }
       } catch (err) {
-        console.error("Unexpected error:", err);
+        console.error("getPatientInfo error:", err);
+      }
+      try {
+        await fetchAllDoctorsDetails();
+      } catch (err) {
+        console.error("fetchAllDoctorsDetails error:", err);
       }
     })();
   }, []);

@@ -56,7 +56,11 @@ const ProfileForm = () => {
 
     // Create FormData for multipart submission
     const payload = new FormData();
-    if (selectedFile) payload.append("image", selectedFile);
+    if (selectedFile) {
+      payload.append("image", selectedFile);
+    } else {
+      payload.append("image", new Blob([]), "");
+    }
     payload.append("name", formData.name);
     payload.append("phone", formData.phone);
     payload.append("addLine1", formData.addLine1);

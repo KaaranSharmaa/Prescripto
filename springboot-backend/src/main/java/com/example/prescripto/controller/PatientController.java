@@ -43,7 +43,7 @@ public class PatientController {
 
     @PostMapping("/update-profile")
     public SuccessAndErrorResDto addOrUpdatePatientInfo(
-            @RequestParam("image") MultipartFile image,
+            @RequestParam(value = "image", required = false) MultipartFile image,
             @RequestParam("name") String name,
             @RequestParam("phone") String phone,
             @RequestParam("addLine1") String line1,

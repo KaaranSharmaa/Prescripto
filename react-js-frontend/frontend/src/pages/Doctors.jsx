@@ -25,11 +25,10 @@ const Doctors = () => {
 
   // useMemo to memoize the filtered doctors
   const filterDoc = useMemo(() => {
-    if (decodedSpeciality === "All") {
-      return doctorsData;
-    }
-    return doctorsData?.filter(
-      (doc) => doc.speciality === decodedSpeciality
+    if (!doctorsData || doctorsData.length === 0) return [];
+    if (decodedSpeciality === "All") return doctorsData;
+    return doctorsData.filter(
+      (doc) => doc.speciality?.toLowerCase().trim() === decodedSpeciality?.toLowerCase().trim()
     );
   }, [decodedSpeciality, doctorsData]);
 
@@ -67,10 +66,10 @@ const Doctors = () => {
         )}
 
         <div className="w-full grid grid-cols-auto gap-4 gap-y-6">
-          {filterDoc?.length === 0 ? (
-            <h1 className="text-gray-600 text-center">
-              Not available for now.
-            </h1>
+          {!doctorsData || doctorsData.length === 0 ? (
+            <h1 className="text-gray-600 text-center">Loading doctors...</h1>
+          ) : filterDoc.length === 0 ? (
+            <h1 className="text-gray-600 text-center">Not available for now.</h1>
           ) : (
             filterDoc.map((item, index) => (
               <Doctor
