@@ -28,7 +28,7 @@ const Footer = () => {
         <div>
           <p className="text-xl font-medium mb-5">GET IN TOUCH</p>
           <ul className="flex flex-col gap-2 text-gray-600">
-            <li>+91 7585046672</li>
+            <li>+91 8273102306</li>
             <li>prescripto.support@mail.com</li>
           </ul>
         </div>
@@ -37,8 +37,7 @@ const Footer = () => {
       <div>
         <hr />
         <p className="py-5 text-sm text-center">
-          Copyright © `2025 Prescripto - All Right Reserved.
-          {`  ( Designed by Himadri Karan TECB )`}
+          Copyright © 2025 Prescripto - All Right Reserved. ( Designed by Karan Sharma  )
         </p>
       </div>
     </div>
