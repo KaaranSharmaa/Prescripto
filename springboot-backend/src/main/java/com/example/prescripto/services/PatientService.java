@@ -159,7 +159,7 @@ public class PatientService {
         Patient patient = optPatient.get();
 
         if(optPatientInfo.isEmpty()) {
-            return null;
+            return new GetInfoDto(null, patient.getEmail(), null, null, null, null, null, null);
         }
 
         PatientInfo patientInfo = optPatientInfo.get();

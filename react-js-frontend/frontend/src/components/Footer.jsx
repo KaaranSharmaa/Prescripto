@@ -26,10 +26,12 @@ const Footer = () => {
         </div>
         {/* ----------- Right Section --------------- */}
         <div>
-          <p className="text-xl font-medium mb-5">GET IN TOUCH</p>
+          <p className="text-xl font-medium mb-5">OUR OFFICE</p>
           <ul className="flex flex-col gap-2 text-gray-600">
-            <li>+91 8273102306</li>
-            <li>prescripto.support@mail.com</li>
+            <li>Uttar Pardesh, Ghaziabad</li>
+            <li>Kolkata, West Bengal 700032</li>
+            <li>Tel: (+91) 8273102306</li>
+            <li>Email: karansharma07111@gmail.com</li>
           </ul>
         </div>
       </div>
@@ -37,7 +39,7 @@ const Footer = () => {
       <div>
         <hr />
         <p className="py-5 text-sm text-center">
-          Copyright © 2025 Prescripto - All Right Reserved. ( Designed by Karan Sharma  )
+          Copyright © 2026 Prescripto - All Right Reserved. ( Designed by Karan Sharma  )
         </p>
       </div>
     </div>

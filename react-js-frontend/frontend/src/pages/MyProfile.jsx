@@ -5,7 +5,7 @@ import { apiContext } from "../api/ApiContextProvider";
 
 const MyProfile = () => {
   const { user } = useContext(AppContext);
-  const { updatePatientProfile, loading, uploadPatientImage } = useContext(apiContext);
+  const { updatePatientProfile, loading, uploadPatientImage, getPatientInfo } = useContext(apiContext);
 
   const [userData, setUserData] = useState({
     name: "",
@@ -73,7 +73,7 @@ const MyProfile = () => {
       if (res && res.message) {
         setMessage(res.message);
       }
-
+      await getPatientInfo();
       setIsEdit(false);
     } catch (error) {
       console.error("Error saving profile:", error);

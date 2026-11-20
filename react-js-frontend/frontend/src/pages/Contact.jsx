@@ -11,8 +11,8 @@ const Contact = () => {
         <img className='w-full md:max-w-[360px]' src={assets.contact_image} alt="" />
         <div className='flex flex-col justify-center items-start gap-6'>
           <p className='font-semibold text-lg text-gray-600'>OUR OFFICE</p>
-          <p className='text-gray-500'>8b, Rajendra Prasad Colony, Jadavpur <br /> Kolkata, West Bengal 700032</p>
-          <p className='text-gray-500'>Tel: {`(+91) 75850-46672`} <br /> Email: karanhimadri1234@gmail.com</p>
+          <p className='text-gray-500'>Uttarpardesh <br /> Ghaziabad</p>
+          <p className='text-gray-500'>Tel: {`(+91) 8273102306`} <br /> Email: karansharma07111@gmail.com</p>
           <p className='font-semibold text-lg text-gray-600'>CAREERS AT PRESCRIPTO</p>
           <p className='text-gray-500'>Learn more about our teams and job openings.</p>
           <button className='border border-primary px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-500'>Explore Jobs</button>

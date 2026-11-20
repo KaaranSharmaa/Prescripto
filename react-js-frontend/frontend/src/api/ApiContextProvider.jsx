@@ -108,12 +108,11 @@ const ApiContextProvider = ({ children }) => {
     try {
       const response = await axiosInstance.get("/patient/me")
       const data = response.data;
-      if (!data.success) {
+      if (!data || !data.email) {
         return;
       }
       setTrackLoggrdIn(true)
       handleUserData(data)
-      console.log("INFOO ", data)
     } catch (error) {
       console.error(error.message)
     }
